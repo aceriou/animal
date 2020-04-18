@@ -1,0 +1,32 @@
+Just download and import db.sql or db_data.sql from /backend/resources/ into MySQL.
+Modify core.php to your MySQL credentials.
+
+This is the file structure.
+  index.php - the main page people see when they access the website
+  
+  /backend/ - folder for site owners access, and the backend workings of the site.
+    core.php   - the main configuration file included with every page. includes mysql
+    dash.php   - the frontend to manage the website.
+    manage.php - the frontend to view all the animals
+    
+    /resources/ - any plugins/resources are stored here
+      adminer.php - adminer.php is a lightweight clone of phpmyadmin.
+      db.sql      - this is the exported mysql structure
+      db_data.sql - this is also the exported sql structure, but with some data
+      
+    /manage/ - folder for managing animals  
+      add.php    - frontend for adding animals
+      doAdd.php  - backend for adding animals
+      edit.php   - frontend for editing animals
+      doEdit.php - backend for editing animals
+      doRemove.php - backend for removing animals
+    
+ * The function doSafe.php in core.php is used everywhere to sanitize inputs before use in SQL statements. But it's an old function I made a while ago, so there could be a better method.The
+ * There is no password protecting the admin page.
+ * The "import animals" link doesn't work in manage.php.
+ 
+ 
+ TODO:
+ - installer page to get this website up and running with a button
+ - themes and easy integration between front and backend
+ - importing data
